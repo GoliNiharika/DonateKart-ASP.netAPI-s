@@ -14,9 +14,12 @@ namespace RestApi
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello");
+          
             List<Class1> ListOfCampaigns = getCampaigns();
-            
+
+
+            //Assignment Activity --- 1
+
             //sorts the json by total amount field and prints title, totalAmount, backersCount, endDate
             var SortedCampaignsByTotalAmount = ListOfCampaigns.OrderBy(x => x.totalAmount);
             foreach (var campaign in SortedCampaignsByTotalAmount)
@@ -24,24 +27,31 @@ namespace RestApi
                 Console.WriteLine(campaign.title + " " + campaign.totalAmount + " " + campaign.backersCount + " " + campaign.endDate);
             }
 
+
+
+            //Assignment Activity --- 2
+
             var todaysDate = DateTime.Today;
 
             //filtered records using FindAll to get Active Campaigns and campaigns created in last 30 days
             List<Class1> ListOfActiveCampaigns = new List<Class1>();
-            
+            //ListOfActiveCampaigns list contains all the campaigns whose end date is greater than today's date
             ListOfActiveCampaigns = ListOfCampaigns.FindAll(x => DateTime.Compare(x.endDate,todaysDate) == 1 );
             foreach (var campaign in ListOfActiveCampaigns)
                 Console.WriteLine(campaign.endDate +" "+campaign.title+" "+campaign.created);
 
+            //CampaignsCreatedwithin30days list contains all the campaigns which are created in last 30 days
             List<Class1> CampaignsCreatedwithin30days =  new List<Class1>();
             CampaignsCreatedwithin30days = ListOfActiveCampaigns.FindAll(x => (todaysDate - x.created).TotalDays <= 30);
             foreach (var campaign in CampaignsCreatedwithin30days)
                 Console.WriteLine(campaign.code + " " + campaign.created + " " + campaign.title + " " + campaign.endDate);
 
           
+            //Assignment Activity --- 3
+
 
             //for loop to find if a campaign is active by comparing endDate field with today
-            // also to find list of campaigns for which procuredAmount is greater than or equal tp TotalAmount
+            // also to find list of campaigns for which procuredAmount is greater than or equal t0 TotalAmount
             List<Class1> ListOfClosedCampaigns = new List<Class1>();
             List<Class1> ProcuredGreaterthanTotalAmount = new List<Class1>();
             foreach (var campaign in ListOfCampaigns)
@@ -52,9 +62,10 @@ namespace RestApi
                 if (campaign.procuredAmount >= campaign.totalAmount)
                     ProcuredGreaterthanTotalAmount.Add(campaign);
             }
-            Console.WriteLine(ListOfClosedCampaigns);
-            Console.WriteLine(ProcuredGreaterthanTotalAmount);
-
+            Console.WriteLine("This is the List of Closed Campaigns");
+            foreach (var campaigns in ListOfClosedCampaigns) Console.WriteLine(campaigns.title + " " + campaigns.created + " " + campaigns.totalAmount + campaigns.endDate);
+            Console.WriteLine("This is the List of Campaigns which have Procured Amount greater than equal to Total Amount");
+            foreach (var campaigns in ProcuredGreaterthanTotalAmount) Console.WriteLine(campaigns.title + " " + campaigns.created + " " + campaigns.totalAmount + campaigns.endDate);
 
         }
 
