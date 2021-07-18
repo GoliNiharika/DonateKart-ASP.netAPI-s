@@ -1,0 +1,12 @@
+C:\Users\Niharika\source\repos\RestApi\RestApi\bin\Debug\RestApi.exe.config
+C:\Users\Niharika\source\repos\RestApi\RestApi\bin\Debug\RestApi.exe
+C:\Users\Niharika\source\repos\RestApi\RestApi\bin\Debug\RestApi.pdb
+C:\Users\Niharika\source\repos\RestApi\RestApi\bin\Debug\RestSharp.dll
+C:\Users\Niharika\source\repos\RestApi\RestApi\bin\Debug\RestSharp.xml
+C:\Users\Niharika\source\repos\RestApi\RestApi\obj\Debug\RestApi.csprojAssemblyReference.cache
+C:\Users\Niharika\source\repos\RestApi\RestApi\obj\Debug\RestApi.csproj.CoreCompileInputs.cache
+C:\Users\Niharika\source\repos\RestApi\RestApi\obj\Debug\RestApi.csproj.CopyComplete
+C:\Users\Niharika\source\repos\RestApi\RestApi\obj\Debug\RestApi.exe
+C:\Users\Niharika\source\repos\RestApi\RestApi\obj\Debug\RestApi.pdb
+C:\Users\Niharika\source\repos\RestApi\RestApi\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Niharika\source\repos\RestApi\RestApi\bin\Debug\Newtonsoft.Json.xml
