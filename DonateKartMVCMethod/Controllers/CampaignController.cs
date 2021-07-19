@@ -33,6 +33,7 @@ namespace DonateKartMVCMethod.Controllers
                     ModelState.AddModelError(string.Empty, "Error occured");
                 }
             }
+            campaigns = campaigns.OrderBy(x => x.totalAmount);
             return View(campaigns);
         }
 

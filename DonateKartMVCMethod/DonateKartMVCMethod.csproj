@@ -168,7 +168,6 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Campaign\Index.cshtml" />
-    <Content Include="Views\Campaign\GetSortedCampaigns.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
