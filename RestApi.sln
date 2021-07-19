@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestApi", "RestApi\RestApi.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DonateKartMVCMethod", "DonateKartMVCMethod\DonateKartMVCMethod.csproj", "{4C196474-4900-4316-BCE9-DE98CFD28BF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DonateKartWebAPI", "DonateKartWebAPI\DonateKartWebAPI.csproj", "{A73F211A-5664-45BF-BDCA-239EB32E74CA}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{4C196474-4900-4316-BCE9-DE98CFD28BF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C196474-4900-4316-BCE9-DE98CFD28BF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C196474-4900-4316-BCE9-DE98CFD28BF2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A73F211A-5664-45BF-BDCA-239EB32E74CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A73F211A-5664-45BF-BDCA-239EB32E74CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A73F211A-5664-45BF-BDCA-239EB32E74CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A73F211A-5664-45BF-BDCA-239EB32E74CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

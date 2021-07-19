@@ -5,11 +5,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>These Are All Closed Campaigns</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
 <table class="table">
     <tr>
         <th>
@@ -66,65 +67,69 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.code)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.featured)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.priority)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.shortDesc)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.imageSrc)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.created)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.endDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.totalAmount)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.procuredAmount)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.totalProcured)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.backersCount)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.categoryId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ngoCode)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ngoName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.daysLeft)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.percentage)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        var endDate = item.endDate;
+        var today = DateTime.Today;
+        int result = DateTime.Compare(endDate, today);
+        if (result < 1)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.code)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.featured)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.priority)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.shortDesc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.imageSrc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.created)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.endDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.totalAmount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.procuredAmount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.totalProcured)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.backersCount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.categoryId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ngoCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ngoName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.daysLeft)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.percentage)
+                </td>
+
+            </tr>
+        }
+
+    }
 
 </table>
