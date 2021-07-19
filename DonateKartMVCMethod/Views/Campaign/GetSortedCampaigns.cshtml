@@ -1,0 +1,130 @@
+﻿@model IEnumerable<DonateKartMVCMethod.Models.CampaignModel>
+
+@{
+    ViewBag.Title = "GetSortedCampaigns";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetSortedCampaigns</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.featured)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.priority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.shortDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.imageSrc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.created)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.endDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.totalAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.procuredAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.totalProcured)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.backersCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.categoryId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ngoCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ngoName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.daysLeft)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.percentage)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.featured)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.priority)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.shortDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.imageSrc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.created)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.endDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.totalAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.procuredAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.totalProcured)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.backersCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.categoryId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ngoCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ngoName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.daysLeft)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.percentage)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
